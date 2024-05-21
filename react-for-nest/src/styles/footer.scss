@@ -1,0 +1,316 @@
+// .container {
+//     padding-right: 15px;
+//     padding-left: 15px;
+//     margin-right: auto;
+//     margin-left: auto;
+//   }
+  
+//   @media (max-width: 740px) {
+//     .footer{
+//         padding-right: 15px;
+//         padding-left: 15px;
+//         margin-right: auto;
+//         margin-left: auto;
+
+//         .footer__heading{
+//             text-align: center;
+//             margin: auto;
+//         }
+//     }
+//     .row {
+//         margin-left: -8px;
+//         margin-right: -8px;
+//     }
+
+//     .col {
+//         padding-left: 8px;
+//         padding-right: 8px;
+//     }
+
+//     // Define medium resolution column sizes
+//     @for $i from 0 through 12 {
+//         .m-#{$i} {
+//             flex: 0 0 #{percentage(calc($i / 12))};
+//             max-width: #{percentage(calc($i / 12))};
+//         }
+
+//         .m-o-#{$i} {
+//             margin-left: #{percentage(calc($i / 12))};
+//         }
+//     }
+// }
+  
+.footer {
+    padding-top: 32px;
+    border-top: 2px solid #cccc;
+    background-color: #f7f7f7;
+
+    &__heading {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        color: #413f3f;
+        display: flex;
+        text-align: left;
+    }
+
+    &__bottom{
+        text-align: center;
+    }
+    .footer-list {
+        padding-left: 0;
+        list-style: none;
+
+        .footer-item {
+            display: flex;
+            text-align: left;
+        }
+
+        .footer-item__link {
+            display: flex;
+            text-decoration: none;
+            font-size: 1.1rem;
+            color: #737373;
+            padding: 5px 0;
+            align-items: center;
+
+            &:hover {
+                color: #0080FF;
+            }
+
+            &-icon {
+                font-size: 1.6rem;
+                margin: 0 8px 0 0;
+            }
+        }
+    }
+
+    .footer__download {
+        display: flex;
+        padding-left: 0;
+        margin-top: 8px;
+
+        &-qr {
+            width: 80px;
+            height: 80px;
+            border: 1px solid #cccc;
+            border-radius: 2px;
+        }
+
+        &-apps {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 16px;
+
+            &-img {
+                height: 18px;
+            }
+
+            &__link {
+                color: transparent;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__bottom {
+        padding: 8px 0;
+        background-color: #f5f5f5;
+        margin-top: 30px;
+        border-top: 1px solid #d4d0d0;
+
+        &__text {
+            margin: 0;
+            color: #737373;
+            text-align: center;
+            font-size: 1.4rem;
+        }
+    }
+
+    &__content {
+        padding: 0 16px;
+    }
+
+    .footer__heading {
+        text-align: center;
+    }
+
+    .footer__download,
+    .footer-item__link {
+        justify-content: left;
+    }
+
+    .footer__download-apps {
+        flex: unset;
+    }
+
+    .footer__download-apps-link {
+        display: block;
+        padding: 6px 8px;
+    }
+}
+.grid {
+    width: 100%;
+    display: block;
+    padding: 0;
+    
+    &.wide {
+        max-width: 1300px;
+        margin: 0 auto;
+        
+        .footer__text {
+            color: #737373;
+        }
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -4px;
+    margin-right: -4px;
+
+    &.no-gutters {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.col {
+    padding-left: 4px;
+    padding-right: 4px;
+
+    &.no-gutters {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+// Define column sizes
+// @for $i from 0 through 12 {
+//     .c-#{$i} {
+//         flex: 0 0 #{percentage(calc($i / 12))};
+//         max-width: #{percentage(calc($i / 12))};
+//     }
+
+//     .c-o-#{$i} {
+//         margin-left: #{percentage(calc($i / 12))};
+//     }
+// }
+
+// Media queries
+@media (min-width: 740px) {
+    .row {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+
+    .col {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    // Define medium resolution column sizes
+    @for $i from 0 through 12 {
+        .m-#{$i} {
+            flex: 0 0 #{percentage(calc($i / 12))};
+            max-width: #{percentage(calc($i / 12))};
+        }
+
+        .m-o-#{$i} {
+            margin-left: #{percentage(calc($i / 12))};
+        }
+    }
+}
+
+@media (min-width: 1113px) {
+    .row {
+        margin-left: 3px;
+        margin-right: -116px;
+    }
+
+    .col {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    // Define large resolution column sizes
+    @for $i from 0 through 12 {
+        .l-#{$i} {
+            flex: 0 0 #{percentage(calc($i / 12))};
+            max-width: #{percentage(calc($i / 12))};
+        }
+
+        .l-o-#{$i} {
+            margin-left: #{percentage(calc($i / 12))};
+        }
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .grid.wide {
+        width: 644px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .grid.wide {
+        width: 984px;
+    }
+
+    .grid.wide .row {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+
+    .grid.wide .col {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    // Define column sizes for wide screens
+    @for $i from 0 through 12 {
+        .grid.wide .l-#{$i} {
+            flex: 0 0 #{percentage(calc($i / 12))};
+            max-width: #{percentage(calc($i / 12))};
+        }
+
+        .grid.wide .l-o-#{$i} {
+            margin-left: #{percentage(calc($i / 12))};
+        }
+    }
+}
+
+@media (max-width: 739px) {
+    .grid.wide {
+        width: 50%;
+    }
+
+    .grid.wide .row {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+
+    .grid.wide .col {
+        padding-left: 12px;
+        padding-right: 12px;
+        .footer__heading{
+            padding: 14px 0 0 0;
+        }
+    }
+    
+
+    // Define column sizes for wide screens
+    @for $i from 0 through 12 {
+        .c-#{$i} {
+            flex: 0 0 #{percentage(calc($i / 12))};
+            max-width: #{percentage(calc($i / 12))};
+        }
+    
+        .c-o-#{$i} {
+            margin-left: #{percentage(calc($i / 12))};
+        }
+    }
+    
+}
+
